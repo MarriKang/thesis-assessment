@@ -7,39 +7,53 @@
     </head>
 
     <body>
-        <header>
-            <a href="#" id="logo">Stamp</a>
-            <nav>
-                <ul class="upper-nav">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Integrations</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </nav>
-            <i class="fas fa-bars"></i>
-        </header>
-        <main>
-            <h1>Simple Way to Organize Your Inspirations</h1>
-            <h4>I think what motivates people is not great hate, but great love for other people.</h4>
-            <form class="sign-up-form">
+        <div class="grid-container">
+            <header>
+                <a href="#" class="logo">Stamp</a>
+                <nav>
+                    <ul class="upper-nav">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </header>
+            <main>
+                    <h1>Simple Way to Organize Your Inspirations</h1>
+                    <h4>I think what motivates people is not great hate, but great love for other people.</h4>
+            </main>
+            <form>
                 <h5>SIGN UP FOR FREE</h5>
-                <input type="text" name="name" placeholder="Name"></input>
-                <input type="text" name="email" placeholder="E-mail"></input>
-                <input type="password" name="password" placeholder="Password"></input>
-                <button type="submit">Sign Up</button>        
+                <table>
+                    <tr>
+                        <td><input type="text" name="name" placeholder="Name"></input></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="email" placeholder="E-mail"></input></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="password" placeholder="Password"></input></td>
+                    </tr>
+                    <tr>
+                        <td><button class="sign-up-button" type="submit">Sign Up<i class="fas fa-angle-right"></i></button></td>  
+                    </tr>
+                </table>    
             </form>
-        </main>
-        <footer>
-            <small>@ 2016 Stamp. All Rights Reserved</small>
-            <nav>
-                <ul id="lower-nav">
-                    <li>CONTACT</li>
-                    <li>HELP</li>
-                    <li>TERMS OF USE</li>
-                    <li>PRIVACY POLICY</li>
-                </ul>
-            </nav>
-        </footer>
+            <footer>
+                <small>@ 2016 Stamp. All Rights Reserved</small>
+                <nav>
+                    <ul class="lower-nav">
+                        <li>CONTACT</li>
+                        <li>HELP</li>
+                        <li>TERMS OF USE</li>
+                        <li>PRIVACY POLICY</li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
     </body>
 </html>

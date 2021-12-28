@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yanone+Kaffeesatz:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Roboto&family=Yanone+Kaffeesatz:wght@700&display=swap');
 
 html {
     min-height: 100%;
@@ -15,18 +15,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1% 5%;
-}
-
-#logo {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 2em;
-}
-
 ul {
     list-style-type: none;
 }
@@ -36,7 +24,131 @@ a {
     color: white;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+/* Header elements */
+
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 5%;
+}
+
+.logo {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2em;
+}
+
 .upper-nav li {
     display: inline-block;
+    padding: 0 1.5em;
+}
+
+.menu-button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Main content */
+
+main {
+    grid-column: 1;
+    margin: 10%;
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+main h1 {
+    width: 300px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+main h4 {
+    width: 350px;
+    margin-top: 0;
+}
+
+form {
+    grid-column-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin: 10%;
+}
+
+form h5 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    letter-spacing: .2em;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 0;
+}
+
+table input {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+input::placeholder {
+    color: lightgray;
+}
+
+.sign-up-button {
+    border: none;
+    background-color: rgb(44, 153, 237);
+    color: white;
+    width: 100%;
+}
+
+/* Footer elements */
+
+footer {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 5%;
+}
+
+.lower-nav li {
+    display: inline-block;
     padding: 0 1em;
+}
+
+/* Resizing */
+
+@media (min-width: 300px) and (max-width: 700px) {
+    .upper-nav {
+        display: none;
+    }
+
+    form {
+        grid-column: 1;
+    }
+
+    footer {
+        flex-flow: column-reverse;
+        text-align: center;
+    }
+
+    .lower-nav li {
+        display: block;
+    }
 }
