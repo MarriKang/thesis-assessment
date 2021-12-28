@@ -3,10 +3,20 @@
     <head>
         <title>Stamp</title>
         <script src="https://kit.fontawesome.com/3e5d464e66.js" crossorigin="anonymous"></script>
+        <script src="index.js" defer></script>
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <a href="javascript:void(0)" class="close-hamburger" onclick="closeMenu()">&times;</a>
+            <ul class="hamburger-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Integrations</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </div>
         <div class="grid-container">
             <header>
                 <a href="#" class="logo">Stamp</a>
@@ -18,7 +28,7 @@
                         <li><a href="#">Contacts</a></li>
                     </ul>
                 </nav>
-                <button class="menu-button">
+                <button id="menu-button" onclick="openMenu()">
                     <i class="fas fa-bars"></i>
                 </button>
             </header>
@@ -30,27 +40,39 @@
                 <h5>SIGN UP FOR FREE</h5>
                 <table>
                     <tr>
-                        <td><input type="text" name="name" placeholder="Name"></input></td>
+                        <td><input type="text" name="name" placeholder="Name" id="name-input"/></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="email" placeholder="E-mail"></input></td>
+                        <td><input type="text" name="email" placeholder="E-mail" id="email-input"/></td>
                     </tr>
                     <tr>
-                        <td><input type="password" name="password" placeholder="Password"></input></td>
+                        <td>
+                            <div class="pw-icon">
+                                <i class="fas fa-eye-slash"></i>
+                                <input type="password" name="password" placeholder="Password" id="pw-input"/>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td><button class="sign-up-button" type="submit">Sign Up<i class="fas fa-angle-right"></i></button></td>  
+                        <td><button class="sign-up-button" type="submit">Sign Up
+                            <i class="fas fa-angle-right"></i>
+                        </button></td>  
                     </tr>
-                </table>    
+                </table>
+                <p class="tos">
+                    By clicking "Sign up" I agree to our
+                    <br>
+                    <a href="#">Terms of Service.</a>
+                </p>
             </form>
             <footer>
                 <small>@ 2016 Stamp. All Rights Reserved</small>
                 <nav>
                     <ul class="lower-nav">
-                        <li>CONTACT</li>
-                        <li>HELP</li>
-                        <li>TERMS OF USE</li>
-                        <li>PRIVACY POLICY</li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">HELP</a></li>
+                        <li><a href="#">TERMS OF USE</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
                     </ul>
                 </nav>
             </footer>
