@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background-image: url("images/background.png");
+    background: rgba(0, 0, 0, 0.5) url("images/background.png");
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
@@ -13,6 +13,12 @@ body {
     background-attachment: fixed;
     color: white;
     font-family: 'Roboto', sans-serif;
+    background-blend-mode: darken;
+}
+
+
+.bg-image {
+    z-index: 0;
 }
 
 ul {
@@ -22,6 +28,11 @@ ul {
 a {
     text-decoration: none;
     color: white;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: lightskyblue;
 }
 
 .grid-container {
@@ -84,6 +95,14 @@ header {
     transition: 0.3s;
 }
 
+.hamburger-menu a {
+    color: lightslategrey;
+}
+
+.hamburger-menu a:hover {
+    color: white;
+}
+
 .close-hamburger {
     position: absolute;
     top: 5%;
@@ -102,6 +121,7 @@ main {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    padding-left: 4em;
 }
 
 main h1 {
@@ -114,6 +134,8 @@ main h1 {
 main h4 {
     width: 350px;
     margin-top: 0;
+    line-height: 1.5em;
+    color: lightgrey;
 }
 
 form {
@@ -141,7 +163,6 @@ table td {
     width: 100%;
 }
 
-
 table input {
     background-color: rgb(255, 255, 255, 0.1);
     color: white;
@@ -152,6 +173,10 @@ table input {
 
 input::placeholder {
     color: lightgray;
+}
+
+input:focus {
+    background-color: rgb(119, 136, 153, 0.5);
 }
 
 #name-input {
@@ -187,6 +212,14 @@ input::placeholder {
     cursor: pointer;
 }
 
+.fas {
+    transition: 0.3s;
+}
+
+.fa-eye-slash {
+    opacity: 0.7;
+}
+
 .sign-up-button {
     border: none;
     background-color: rgb(44, 153, 237);
@@ -194,6 +227,7 @@ input::placeholder {
     width: 100%;
     padding: 1.5em 1.5em;
     border-radius: 0 0 3px 3px;
+    cursor: pointer;
 }
 
 .tos {
@@ -226,6 +260,10 @@ footer {
 /* Resizing */
 
 @media screen and (max-width: 700px){
+    body {
+        background-image: url('images/background-mobile.png');
+        background-position: center;
+    }
 
     .upper-nav {
         display: none;
@@ -240,6 +278,7 @@ footer {
         text-align: center;
         align-items: center;
         margin-bottom: none;
+        padding-left: 0;
     }
 
     main h1, h4 {
