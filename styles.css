@@ -47,13 +47,17 @@ header {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 1% 5%;
+    align-items: flex-start;
+    margin: 2% 5%;
 }
 
 .logo {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 2em;
+}
+
+.upper-nav {
+    margin-top: 0;
 }
 
 .upper-nav li {
@@ -248,8 +252,12 @@ footer {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 1% 5%;
+    align-items: flex-end;
+    margin: 2% 5%;
+}
+
+.lower-nav {
+    margin-bottom: 0;
 }
 
 .lower-nav li {
@@ -310,6 +318,7 @@ footer {
         justify-content: center;
         justify-items: center;
         text-align: center;
+        align-items: center;
         padding: 2em;
     }
 
